@@ -1,0 +1,11 @@
+{
+  "description": "quick settings button remover",
+  "name": "Quick Settings Button Remover",
+  "shell-version": [
+    "43"
+  ],
+  "url": "https://github.com/qwreey75/gnome-quick-settings-button-remover",
+  "uuid": "gnome-quick-settings-button-remover@qwreey",
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.remove-quick-buttons"
+}
