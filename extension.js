@@ -38,26 +38,26 @@ class hideQuickButtonsClass {
                 if (item.label) buttonsLabel[name] = item.label
                 if (!item.visible) defaultInvisibleButtons.push(name)
             })
-            this.settings.set_strv("all-buttons",allButtons)
+            this.settings.set_strv("list-buttons",allButtons)
             this.settings.set_strv("default-invisible-buttons",defaultInvisibleButtons)
-            this.settings.set_string("buttons-label",JSON.stringify(buttonsLabel))
+            this.settings.set_string("button-labels",JSON.stringify(buttonsLabel))
         }
 
 
         let items; {
-            items = this.settings.get_strv("removed-buttons")
+            items = this.settings.get_strv("user-removed-buttons")
             if (!items) {
                 items = []
-                this.settings.set_strv("removed-buttons",items)
+                this.settings.set_strv("user-removed-buttons",items)
             }
         }
 
         this._load(items)
 
         this._removedItemsConnection =
-        this.settings.connect('changed::removed-buttons', (settings, key) => {
+        this.settings.connect('changed::user-removed-buttons', (settings, key) => {
             this._unload()
-            this._load(this.settings.get_strv("removed-buttons"))
+            this._load(this.settings.get_strv("user-removed-buttons"))
         })
     }
     disable() {

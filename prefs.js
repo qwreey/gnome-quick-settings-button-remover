@@ -10,12 +10,12 @@ function fillPreferencesWindow(window) {
     const widget = new Adw.PreferencesPage()
     window.add(widget)
 
-    let allButtons = settings.get_strv("all-buttons") || []
-    let removedButtons = settings.get_strv("removed-buttons") || []
+    let allButtons = settings.get_strv("list-buttons") || []
+    let removedButtons = settings.get_strv("user-removed-buttons") || []
     let defaultInvisibleButtons = settings.get_strv("default-invisible-buttons") || []
     let buttonsLabel
     try {
-        buttonsLabel = JSON.parse(settings.get_string("buttons-label"))
+        buttonsLabel = JSON.parse(settings.get_string("button-labels"))
     } catch {}
     buttonsLabel ||= {}
 
@@ -50,7 +50,7 @@ function fillPreferencesWindow(window) {
                     } else break
                 }
             }
-            settings.set_strv("removed-buttons",removedButtons)
+            settings.set_strv("user-removed-buttons",removedButtons)
         })
 
         row.add_suffix(toggle);
