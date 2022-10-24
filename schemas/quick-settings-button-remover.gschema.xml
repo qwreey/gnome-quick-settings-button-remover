@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="org.gnome.shell.extensions.quick-settings-button-remover.gschema" path="/org/gnome/shell/extensions/quick-settings-button-remover.gschema/">
+  <schema id="org.gnome.shell.extensions.quick-settings-button-remover" path="/org/gnome/shell/extensions/quick-settings-button-remover/">
     <!-- Array of button class names -->
     <key name="user-removed-buttons" type="as">
       <default>[]</default>
