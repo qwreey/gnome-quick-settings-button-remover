@@ -8,7 +8,7 @@ cp extension.js dist/$name/
 cp prefs.js dist/$name/
 cp metadata.json dist/$name/
 mkdir dist/$name/schemas
-cp schemas/quick-settings-button-remover.gschema.xml dist/$name/schemas/
+cp schemas/org.gnome.shell.extensions.quick-settings-button-remover.gschema.xml dist/$name/schemas/
 cp schemas/gschemas.compiled dist/$name/schemas/
 cd dist/$name
 zip -r ../output.zip ./
